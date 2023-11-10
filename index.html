@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey-form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Survei Permukiman Pekerja</h1>
+            <p id="description">Survei pendapatan dan harga hunian pekerja</p>
+        </header>
+        <form id="survey-form" action="#" method="post">
+            <div class="form-group">
+                <label id="name-label" for="name">Masukkan nama anda:</label> 
+                <input type="text" name="name" id="name" placeholder="Masukkan nama anda.">
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Masukkan email anda:</label> 
+                <input type="email" name="email" id="email"  pattern=".+@gmail\.com" placeholder="Masukkan email anda.">
+            </div>
+            <div class="form-group">
+                <label id="age-label" for="age" >Masukkan usia anda:</label> 
+                <input type="number" name="age" id="age" min="17" max="50" placeholder="Usia">
+            </div>
+            <div class="form-group">  
+                <label id="role-label" for="role">Pilih jabatan dari pekerjaan anda saat ini:</label>
+                <div class="dropdown-group">
+                    <select name="role" id="dropdown" class="form-control">  
+                        <option disabled selected>Pilih pekerjaan anda</option>
+                        <option value="karyawan-kontrak">karyawan kontrak</option>
+                        <option value="karyawan-tetap">karyawan tetap</option>
+                        <option value="supervisor">supervisor</option>
+                        <option value="manager">manager</option>
+                    </select>
+                </div>
+            </div>  
+            <div class="form-group">
+                <label id="salary-label" for="salary">Pilih kisaran pendapatan anda saat ini per bulan:</label>
+                <div class="radio-group">
+                    <input type="radio" id="salary1" name="salary" class="inline">
+                    <label for="salary1">1.000.000 - 2.000.000</label><br>
+                    <input type="radio" id="salary2" name="salary" class="inline">
+                    <label for="salary2">2.000.000 - 3.000.000</label><br>  
+                    <input type="radio" id="salary3" name="salary" class="inline">
+                    <label for="salary3">3.000.000 -  4.000.000</label><br>
+                </div> 
+            </div>
+            <div class="form-group">
+                <label id="housing-label" for="housing">Pilihan hunian yang anda pilih saat ini:</label>
+                <div class="radio-group">
+                    <input type="radio" id="housing1" name="housing" class="inline">
+                    <label for="housing1">kos-kosan</label><br>
+                    <input type="radio" id="housing2" name="housing" class="inline">
+                    <label for="housing2">kontrakan</label><br>
+                    <input type="radio" id="housing3" name="housing" class="inline">
+                    <label for="housing3">rumah pribadi</label><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id="price-label" for="price">Bila kos-kosan atau kontrakan, pilih harga sewa:</label>
+                <div class="radio-group">
+                    <input type="radio" id="price1" name="price" class="inline">
+                    <label for="housing1">300.000 - 700.000</label><br>
+                    <input type="radio" id="price2" name="price" class="inline">
+                    <label for="housing2">750.000 - 1.000.000</label><br>
+                    <input type="radio" id="price3" name="price" class="inline">
+                    <label for="housing3">lebih dari 1.000.000</label><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id="criteria-label" for="criteria">Pilih kriteria anda memilih hunian (dapat pilih lebih dari satu):</label>
+                <div class="checkbox-group new-line">
+                    <input type="checkbox" name="criteria" id="criteria1" class="inline">
+                    <label for="criteria1">dekat tempat kerja</label><br>
+                    <input type="checkbox" name="criteria" id="criteria2" class="inline">
+                    <label for="criteria2">banyak rumah makan</label><br>
+                    <input type="checkbox" name="criteria" id="criteria3" class="inline">
+                    <label for="criteria3">dekat tempat teman</label><br>
+                    <input type="checkbox" name="criteria" id="criteria4" class="inline">
+                    <label for="criteria4">lingkungan aman dan nyaman</label><br>
+                    <input type="checkbox" name="criteria" id="criteria5" class="inline">
+                    <label for="criteria5">bebas banjir</label><br>
+                    <input type="checkbox" name="criteria" id="criteria6" class="inline">
+                    <label for="criteria6">harga terjangkau</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id="vision-label" for="vision">Harapan anda di masa depan untuk tinggal di suatu tempat:</label>
+                <textarea id="vision1" name="vision" rows="3" cols="30" placeholder="Saya ingin tinggal di..."></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
